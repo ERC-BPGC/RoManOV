@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: braccio_description
+    relative_path: urdf/braccio.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/visual.srdf
+  CONFIG:
+    author_name: Vedant Shah
+    author_email: vedantshah2012@gmail.com
+    generated_timestamp: 1595925948
