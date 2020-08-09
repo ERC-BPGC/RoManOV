@@ -1,0 +1,60 @@
+<launch>
+<!-- Load the   URDF model into the parameter server -->
+<param name="Bishop_Black" textfile="$(find chess_set)/Bishop_Black/Bishop_Black.urdf" />
+<!-- Spawn a  in Gazebo, taking the description from the
+parameter server -->
+<node name="spawn_urdf1" pkg="gazebo_ros" type="spawn_model"
+args="-param Bishop_Black -urdf -model Bishop_Black" />
+
+<param name="Bishop_white" textfile="$(find chess_set)/Bishop_white/Bishop_white.urdf" />
+<node name="spawn_urdf2" pkg="gazebo_ros" type="spawn_model"
+args="-param Bishop_white -urdf -model Bishop_white" />
+
+<param name="Castle_black" textfile="$(find chess_set)/Castle_black/Castle_black.urdf" />
+<node name="spawn_urdf3" pkg="gazebo_ros" type="spawn_model"
+args="-param Castle_black -urdf -model Castle_black" />
+
+<param name="Castle_white" textfile="$(find chess_set)/Castle_white/Castle_white.urdf" />
+<node name="spawn_urdf4" pkg="gazebo_ros" type="spawn_model"
+args="-param Castle_white -urdf -model Castle_white" />
+
+<param name="king_black" textfile="$(find chess_set)/king_black/king_black.urdf" />
+<node name="spawn_urdf5" pkg="gazebo_ros" type="spawn_model"
+args="-param king_black -urdf -model king_black" />
+
+<param name="king_white" textfile="$(find chess_set)/king_white/king_white.urdf" />
+<node name="spawn_urdf6" pkg="gazebo_ros" type="spawn_model"
+args="-param king_white -urdf -model king_white" />
+
+<param name="pawn_black" textfile="$(find chess_set)/pawn_black/pawn_black.urdf" />
+<node name="spawn_urdf7" pkg="gazebo_ros" type="spawn_model"
+args="-param pawn_black -urdf -model pawn_black" />
+
+<param name="pawn_white" textfile="$(find chess_set)/pawn_white/pawn_white.urdf" />
+<node name="spawn_urdf8" pkg="gazebo_ros" type="spawn_model"
+args="-param pawn_white -urdf -model pawn_white" />
+
+<param name="Queen_black" textfile="$(find chess_set)/Queen_black/Queen_black.urdf" />
+<node name="spawn_urdf9" pkg="gazebo_ros" type="spawn_model"
+args="-param Queen_black -urdf -model Queen_black" />
+
+<param name="Queen_white" textfile="$(find chess_set)/Queen_white/Queen_white.urdf" />
+<node name="spawn_urdf10" pkg="gazebo_ros" type="spawn_model"
+args="-param Queen_white -urdf -model Queen_white" />
+
+<param name="Rook_black" textfile="$(find chess_set)/Rook_black/Rook_black.urdf" />
+<node name="spawn_urdf11" pkg="gazebo_ros" type="spawn_model"
+args="-param Rook_black -urdf -model Rook_black" />
+
+<param name="Rook_white" textfile="$(find chess_set)/Rook_white/Rook_white.urdf" />
+<node name="spawn_urdf12" pkg="gazebo_ros" type="spawn_model"
+args="-param Rook_white -urdf -model Rook_white" />
+
+<param name="board" textfile="$(find chess_set)/board/board.urdf" />
+<node name="spawn_urdf13" pkg="gazebo_ros" type="spawn_model"
+args="-param board -urdf -x 2 -y 2 -model board" />
+
+
+
+<include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+</launch>
